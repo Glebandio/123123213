@@ -1,9 +1,9 @@
 import vk_api
 from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 
-GROUP_1_TOKEN = 'vk1.a.uwjXMDjnjT-TJ1Sjl_Y9ojzSBC2Hk7pNkqHSpv2mOlO8ROOr7kZKNWlRqKdJ6LlOnFGgcQ0AdexBTM6ool7GkDeXD2vn46hpyqsZ7jvj0meINRCpbX5S3BEe6de59c8HxrFMlRdYtPrHiQlMIP42tO6LuZZfSNQQk3cH2EWivmXratAbHZwsWh3H64N79D5LRUKehhnaNy5prx4FS5qJCw'
-GROUP_2_TOKEN = 'vk1.a.Bz7irK04nnzJt-yCL2CA34rMQebvtd_F2TBEfyWE-qmgYm47WxR7HelEtslUWkl5B-O3Cmf7IpAoKbgThmCyn_pUDuliLsOvQO33IAytTzKMtJkf7492aEZedPlLFtAZ60ztnmgyWJcJZRQsUlCV7v9UnBUd2LxcMGoVBpSduKSQ5dDW4D-Ohqwr9R194SzxfL57ZI8DzvrP9AimU0m9Xg'
-GROUP_1_ID = '228462206'
+GROUP_1_TOKEN = 'vk1.a.mh4m0hv9LnNPNksAjWM8FTCsBKeDbU_dHqt-pKTsnVJyhZmniTXhR1dcp7bxWF3RkXYnJGFAjtmCQk-hrlwAUfrCwyCkgjPo8UKj5DPyfM5SAeO3hWiZBRPz4NxBok9aF3IMtCg7fcjpnFadILvEk-RSE44UhM2PlWh42_TNoOc9yvGhbAY1OJObBfml1gwfTuIZU_tkLRvLgfKKqRJ9ew'
+GROUP_2_TOKEN = 'vk1.a.q9w-mtesgn_K63h8Kh_EpanPdmqLY2YMHzyHOKH60T5UTyskkggTj27v0kM66Gzj6ilcVzugHcJRPYPPPtPatRCP0lV69gKSZmAWyCNpo6HqAtlGLwe7T_xSJIMhQ3Nj4hi-XqBYjekLsG2ck_PkNjGJnL4ygMBlvy2ctYwbhrPkh33pCXSbSBUMxN7BxFLh-ipS90dqoE6orVGtGEXcrQ'
+GROUP_1_ID = '218465724'
 
 vk1_session = vk_api.VkApi(token=GROUP_1_TOKEN)
 vk2_session = vk_api.VkApi(token=GROUP_2_TOKEN)
@@ -11,7 +11,6 @@ vk2_session = vk_api.VkApi(token=GROUP_2_TOKEN)
 vk1 = vk1_session.get_api()
 vk2 = vk2_session.get_api()
 
-# Настройка LongPoll для первой группы
 longpoll = VkBotLongPoll(vk1_session, group_id=GROUP_1_ID)
 
 

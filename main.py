@@ -44,6 +44,10 @@ def process_mentions(text, group_id, post_id=None, comment_id=None):
 
     for word in words:
         if word.startswith('[id'):
+            if ",]" in word or ",|" in word:
+                print(f"Некорректное упоминание {word}, сообщение не будет отправлено.")
+                continue
+
             try:
                 user_id = int(word[3:].split('|')[0])
                 user_mentions.append(user_id)
